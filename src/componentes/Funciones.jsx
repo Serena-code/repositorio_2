@@ -41,7 +41,7 @@ export function Funciones (){
 
 
   return (
-    <div className="Funciones"> 
+    <div className="funciones"> 
       <ListaCompras
         handleChange = {handleChange}
         añadirCompra = {añadirCompra}
@@ -51,15 +51,20 @@ export function Funciones (){
       {compras.length>1 && ( //Boton vaciar se activa colo cuando hay mas de 2 tareas
         <button onClick={()=>setCompras([])}>Vaciar</button>
       )}
-      {compras.map(compra => (
-        <Item key ={compra.id}
-        id = {compra.id}
-        compra = {compra}
-        borrarCompra = {borrarCompra}
-        compras = {compras}
-        setCompras={setCompras}
-        ></Item>
-      ))}
+      <div>
+        {compras.map(compra => (
+          <div class="item">
+            <Item  key ={compra.id}
+            id = {compra.id}
+            compra = {compra}
+            borrarCompra = {borrarCompra}
+            compras = {compras}
+            setCompras={setCompras}
+            ></Item>
+          </div>
+        ))}
+      </div>
+      
     </div>
   )
 

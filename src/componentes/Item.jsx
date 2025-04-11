@@ -28,14 +28,13 @@ export function Item ({compra, borrarCompra,compras, setCompras}){
 
     return(
         edit?
-        <div>
+        <div class="actualizar">
             <input placeholder="Ingrese nuevo producto" value={nuevoTexto} onChange={(e) => setNuevoTexto(e.target.value)} ></input>
-            <input placeholder="Ingrese nueva cantidad" value={nuevaCantidad} onChange={(e) => setNuevaCantidad(e.target.value)} ></input>
+            <input class="cantidad" placeholder="Ingrese nueva cantidad" value={nuevaCantidad} onChange={(e) => setNuevaCantidad(e.target.value)} ></input>
             <button onClick={()=>actualizar(compra.id)}>Actualizar</button>
         </div>  
         :
         <div>
-
             <h2>{compra.compra}</h2>
             <h3 className="cantidad">{compra.cantidad}</h3> 
             <button id="completar" onClick={()=>setCompletada(!completada)}>{completada? "No completada":"Completada"}</button>       

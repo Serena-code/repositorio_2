@@ -16,19 +16,22 @@ export function ListaCompras({handleChange,añadirCompra, compra}){
     return(
         <div className="listaCompras">
             <form onSubmit={añadirCompra}>
-                <input type="text" value={compra} name="producto" placeholder="Ingrese producto" onChange={handleChange}></input>
-                <input value ={count} name="cantidad"></input>
+                <div class="form">
+                    <input type="text" value={compra} name="producto" placeholder="Ingrese producto" onChange={handleChange}></input>
+                    <div>
+                        <button disabled={count === 1} onClick={restar}>
+                            -
+                        </button>
+                        <input class="cantidad" value ={count} name="cantidad"></input>
+                        <button onClick={sumar}>
+                            +
+                        </button>
+                    </div>
+                </div>
+                
                 <button type="submit" onClick={()=>setCount(1)}>Agregar</button>
             </form>
-            <div>
-                <button disabled={count === 1} onClick={restar}>
-                    -
-                </button>
-                
-                <button onClick={sumar}>
-                    +
-                </button>
-            </div>
+            
         </div>
     )
     
