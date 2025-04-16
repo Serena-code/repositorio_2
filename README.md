@@ -1,4 +1,4 @@
-https://serena-code.github.io/repositorio_2/
+https://applistacompra.netlify.app/
 
 # React + Vite
 
