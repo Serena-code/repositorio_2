@@ -29,7 +29,7 @@ export function ListaCompras({handleChange,añadirCompra, compra}){
                     </div>
                 </div>
                 
-                <button type="submit" onClick={()=>setCount(1)}>Agregar</button>
+                <button type="submit" onClick={()=>setCount()}>Agregar</button>
             </form>
             
         </div>
